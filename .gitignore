@@ -1,0 +1,9 @@
+/dist/
+/build/
+/release-artifacts/
+/*.exe
+/*.msi
+/*.zip
+/*.7z
+/*.log
+/.env
