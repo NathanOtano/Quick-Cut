@@ -1,20 +1,46 @@
 # Quick Cut
 
-Canal public de distribution de Quick Cut.
+Quick Cut est un outil Windows local-first pour capturer l’écran, annoter rapidement une image et garder un flux de capture léger.
 
-Ce dépôt ne contient pas le code source privé, les données locales, les journaux, les exports de travail ni les binaires internes. Il sert à publier des versions installables quand elles ont passé les contrôles de publication.
+## Télécharger
 
-## État
+La version publique est distribuée via les releases GitHub :
 
-Aucune version publique n’est publiée pour l’instant.
+- dépôt : https://github.com/NathanOtano/Quick-Cut
+- assets : archive Windows `QuickCut-win-x64-<version>.zip`
+- intégrité : fichier `SHA256SUMS.txt` joint à chaque release
 
-## Ce qui sera publié ici
+## Lancer depuis l’archive
 
-- notes de version publiques ;
-- installateurs ou archives finalisés ;
-- manifeste de build public ;
-- empreinte SHA-256 des fichiers distribués.
+1. Télécharger l’archive de la dernière release.
+2. Décompresser le dossier.
+3. Lancer `QuickCut.Capture.exe`.
 
-## Contrôles avant publication
+Si Windows demande un runtime, installez le .NET Desktop Runtime 10 x64.
 
-Chaque version doit respecter `RELEASE_GATES.md`. En résumé : exporter depuis un état propre, supprimer toute donnée personnelle ou locale, scanner l’arbre public, reconstruire l’installateur depuis une configuration vierge, puis vérifier l’installation sur un profil utilisateur propre.
+Quick Cut crée ses données utilisateur localement au premier lancement. Aucune capture, base locale, préférence personnelle ou journal d’exécution n’est versionné dans ce dépôt.
+
+## Compiler depuis le source
+
+Pré-requis :
+
+- Windows 10 ou plus récent ;
+- SDK .NET 10.
+
+Commandes utiles :
+
+```powershell
+dotnet restore QuickCut.sln
+dotnet build QuickCut.sln -c Release
+dotnet test QuickCut.sln -c Release
+```
+
+Pour produire un dossier publiable :
+
+```powershell
+dotnet publish .\src\QuickCut.Capture\QuickCut.Capture.csproj -c Release -r win-x64 --self-contained false -o .\artifacts\QuickCut-win-x64 -p:DebugType=None -p:DebugSymbols=false -p:IncludeSourceRevisionInInformationalVersion=false
+```
+
+## Périmètre du dépôt
+
+Ce dépôt contient le source applicatif, les tests, les assets publics et la documentation publique. Les captures, journaux, caches et données runtime générées par l’utilisateur restent hors versionnement.

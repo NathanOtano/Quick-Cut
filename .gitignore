@@ -1,9 +1,28 @@
-/dist/
-/build/
-/release-artifacts/
-/*.exe
-/*.msi
-/*.zip
-/*.7z
-/*.log
-/.env
+# Build outputs
+bin/
+obj/
+.vs/
+TestResults/
+
+# Public release artifacts kept on GitHub Releases
+artifacts/
+dist/
+*.zip
+*.sha256
+SHA256SUMS.txt
+
+# Runtime-local data
+captures/
+logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.tmp
+
+# User/local configuration
+*.user
+*.suo
+.env
+.env.*
+!.env.example

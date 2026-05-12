@@ -1,5 +1,7 @@
 # Licence
 
-Ce dépôt public est un canal de distribution.
+Copyright (c) 2026 Nathan Otano. Tous droits réservés.
 
-Aucune licence de code source n’est accordée par ce dépôt tant que le code source n’y est pas publié explicitement. Les conditions d’utilisation et de redistribution des futurs binaires publics devront être précisées avant la première release avec asset.
+Ce dépôt public rend le code source de Quick Cut visible pour installation, audit et construction locale. Aucune licence open source n’est accordée par défaut.
+
+Sauf autorisation écrite explicite, vous ne pouvez pas redistribuer, publier, vendre, relicencier ou intégrer ce code source ou ses binaires dans un autre produit.

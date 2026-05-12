@@ -1,0 +1,24 @@
+{
+  "product": "Quick Cut",
+  "version": "0.1.0",
+  "tag": "v0.1.0",
+  "published_at": "2026-05-13",
+  "repository": "https://github.com/NathanOtano/Quick-Cut",
+  "release_mode": "source-public-plus-release-asset",
+  "asset": {
+    "name": "QuickCut-win-x64-v0.1.0.zip",
+    "size_bytes": 6809695,
+    "sha256": "d3435e8ef0c90d993139f1bc47901f29c285db0cde9082838ae04b6dd1c2be8a"
+  },
+  "checks": {
+    "dotnet_test_release": "passed: 92 tests",
+    "source_scan": "passed: no local path, secret, or excluded internal surface found",
+    "release_output_scan": "passed: no local path, secret, or excluded internal surface found",
+    "artifact_build": "passed: built from the public source tree with local debug symbols disabled"
+  },
+  "runtime": {
+    "target": "win-x64",
+    "self_contained": false,
+    "required_runtime": ".NET Desktop Runtime 10 x64"
+  }
+}

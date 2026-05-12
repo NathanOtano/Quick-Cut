@@ -1,12 +1,18 @@
 # Sécurité
 
-Signalez un problème via les issues GitHub de ce dépôt, sans publier de données sensibles dans le message.
+## Signaler un problème
 
-Pour toute vulnérabilité reproductible, indiquez :
+Pour signaler une vulnérabilité ou un comportement dangereux, ouvrez une issue GitHub en décrivant :
 
 - la version concernée ;
-- le système utilisé ;
-- les étapes minimales de reproduction ;
-- le résultat attendu et observé.
+- les étapes de reproduction ;
+- l’impact attendu ;
+- les fichiers ou captures utiles, sans partager de données sensibles.
 
-Ne joignez pas de données personnelles, de fichiers utilisateur ou de captures contenant des informations privées.
+## Données locales
+
+Quick Cut est conçu comme un outil local-first. Les captures, journaux, bases SQLite et préférences utilisateur doivent rester sur la machine de l’utilisateur et ne doivent pas être committés.
+
+## Publication
+
+Chaque release publique doit être construite depuis l’arbre public, accompagnée d’une empreinte SHA-256 et vérifiée par les contrôles de `RELEASE_GATES.md`.
